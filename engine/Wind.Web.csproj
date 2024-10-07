@@ -6,6 +6,7 @@
     <OutputPath>bin\$(Configuration)\web\</OutputPath>
     <OutputType>Library</OutputType>
     <WasmEnableExperimentalFeatures>true</WasmEnableExperimentalFeatures>
+    <WasmBuildNative>true</WasmBuildNative>
     <RootNamespace>wind</RootNamespace>
     <Nullable>enable</Nullable>
     <PublishTrimmed>true</PublishTrimmed>
@@ -14,6 +15,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Update="wwwroot/mymath.wasm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <PackageReference Include="OpenGL.Net" Version="0.8.4" />
     <PackageReference Include="SDL2-CS.NetCore" Version="2.0.8" />
     <PackageReference Include="YamlDotNet" Version="16.1.0" />

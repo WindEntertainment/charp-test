@@ -8,6 +8,11 @@
 ILoggerStream* Logger::stream = new ConsoleStream();
 Logger Logger::native = Logger();
 
+void helloWorld() {
+  printf("UEBAN, SOSAT'\n");
+  return;
+}
+
 bool windInitRenderer() {
   Logger::native.info("Called native::windInitRenderer");
 
